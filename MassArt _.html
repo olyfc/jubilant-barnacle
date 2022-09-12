@@ -1,576 +1,1054 @@
 <!DOCTYPE html>
-<!-- saved from url=(0020)https://massart.edu/ -->
-<html class="js" lang="en" dir="ltr" prefix="og: http://ogp.me/ns#"><script src="./MassArt __files/nr-1216.min.js"></script><script async="" src="./MassArt __files/analytics.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"f6bf594401",applicationID:"70697536"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
-<link rel="shortcut icon" href="https://massart.edu/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="profile" href="http://www.w3.org/1999/xhtml/vocab">
-<meta name="HandheldFriendly" content="true">
-<meta name="MobileOptimized" content="width">
-<meta http-equiv="cleartype" content="on">
-<link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114">
-<link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144">
-<link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72">
-<link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="generator" content="Drupal 7 (https://www.drupal.org)">
-<link rel="canonical" href="https://massart.edu/">
-<link rel="shortlink" href="https://massart.edu/">
-<meta property="og:site_name" content="MassArt">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://massart.edu/">
-<meta property="og:title" content="MassArt">
-  <title>MassArt |</title>
-  <link type="text/css" rel="stylesheet" href="./MassArt __files/css_QAg-GD0-rMvteJsb0M2_5boSwTzfJcd_R6a9TLe0DA8.css" media="all">
-<link type="text/css" rel="stylesheet" href="./MassArt __files/css_79Jl00sZ9TAjtIoZEewjCskSihfFN4p6FhA6_4pG2tY.css" media="all">
-<link type="text/css" rel="stylesheet" href="./MassArt __files/font-awesome.min.css" media="all">
-<link type="text/css" rel="stylesheet" href="./MassArt __files/css_XSN_K1YWQoZNl-G5rINoSe_CJoSPHzbSmJbxwgorKfQ.css" media="all">
+<html>
 
-<!--[if lte IE 8]>
+<head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="pageable.js"></script>
+    <script type="text/javascript" src="front-end.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="front-end.css">
+    <script src="MassArt%20__files/nr-1216.min.js"></script>
+    <script async="" src="MassArt%20__files/analytics.js"></script>
+    <script type="text/javascript">
+        window["_gaUserPrefs"] = { ioo : function() { return true; } }
+    </script>
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        (window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"f6bf594401",applicationID:"70697536"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("//")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);
+    </script>
+    <link rel="shortcut icon" href="https://massart.edu/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="profile" href="https://www.w3.org/1999/xhtml/vocab">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon-precomposed" href="https://massart.edu/sites/all/themes/omega/omega/apple-touch-icon-precomposed.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="generator" content="Silex v2.2.7">
+    <link rel="canonical" href="https://massart.edu/">
+    <link rel="shortlink" href="https://massart.edu/">
+    <meta property="og:site_name" content="MassArt">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://massart.edu/">
+    <meta property="og:title" content="MassArt">
+    <title>MassArt |</title>
+    <link type="text/css" rel="stylesheet" href="MassArt%20__files/css_QAg-GD0-rMvteJsb0M2_5boSwTzfJcd_R6a9TLe0DA8.css" media="all">
+    <link type="text/css" rel="stylesheet" href="MassArt%20__files/css_79Jl00sZ9TAjtIoZEewjCskSihfFN4p6FhA6_4pG2tY.css" media="all">
+    <link type="text/css" rel="stylesheet" href="MassArt%20__files/font-awesome.min.css" media="all">
+    <link type="text/css" rel="stylesheet" href="MassArt%20__files/css_XSN_K1YWQoZNl-G5rINoSe_CJoSPHzbSmJbxwgorKfQ.css" media="all">
+
+    <!--[if lte IE 8]>
 <link type="text/css" rel="stylesheet" href="https://massart.edu/sites/default/files/css/css_LrN11vJDsqiD9DrlFic0eG1inUlRT8Mkqe_kaSVp-68.css" media="all" />
 <![endif]-->
-<link type="text/css" rel="stylesheet" href="./MassArt __files/css_X6XmDE8OToqQkYa_LUDoup60nh1AgVJf-GB9zxI-Fwo.css" media="all">
+    <link type="text/css" rel="stylesheet" href="MassArt%20__files/css_X6XmDE8OToqQkYa_LUDoup60nh1AgVJf-GB9zxI-Fwo.css" media="all">
 
-  <script src="./MassArt __files/js_CPltpj-VbJGsOxM0pVonxxrrWZnzRPbLB12bq7cdvR8.js"></script>
-<script src="./MassArt __files/js_meavKg15eZjNWFDGbeKx7N1ZLUkm5QoiSmfXqyHLl0M.js"></script><style type="text/css"></style>
-<script src="./MassArt __files/js_nGeLZMZFt9_j7e4FAcjK8y8-JhrJ2kArwz0FTQsk6ks.js"></script>
-<script>document.createElement( "picture" );</script>
-<script src="./MassArt __files/js_CPHJmZu2sPN6DE7yCu9EvYmLd4BvN-38jzRlPJjnG2Q.js"></script>
-<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-6293868-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
-<script src="./MassArt __files/js_fxpnY1LvgHpFKzduu6HqLDmO5KB1dw50KqUpYIBXDIc.js"></script>
-<script src="./MassArt __files/js_r9ROdO-qe3onRCJU3SnaAoMcsNUSTM9j4ntUQ43ALxc.js"></script>
-<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"massart2016","theme_token":"AF7aKdgADTdtPZK0Y-Nl_TAGOW22Grwz1PpNQu4r2zI","jquery_version":"1.10","js":{"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"sites\/all\/libraries\/jquery.event.move\/js\/jquery.event.move.js":1,"sites\/all\/libraries\/jquery.event.swipe\/js\/jquery.event.swipe.js":1,"sites\/all\/modules\/colorbox_swipe\/colorbox_swipe.js":1,"sites\/all\/modules\/addthis\/addthis.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/composer.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/omega\/omega\/js\/no-js.js":1,"sites\/all\/libraries\/fitvids\/jquery.fitvids.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/iwapi.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery.form\/3\/jquery.form.min.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/spin.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/ajax.js":1,"sites\/all\/themes\/massart2016\/js\/page-header.js":1,"sites\/all\/modules\/fitvids\/fitvids.js":1,"sites\/all\/themes\/massart2016\/js\/mobile.behaviors.js":1,"sites\/all\/themes\/massart2016\/js\/owl.carousel.min.js":1,"0":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/imagesloaded.pkgd.min.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/video\/js\/video.js":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/masonry.pkgd.min.js":1,"misc\/progress.js":1,"sites\/all\/modules\/entity_background\/module\/entity_background_image\/plugins\/entity_background\/image.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/massart2016\/js\/jquery.nicescroll.min.js":1,"sites\/all\/themes\/massart2016\/js\/global.js":1,"sites\/all\/themes\/massart2016\/js\/jquery.cookie.js":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/gallery-behaviors.js":1},"css":{"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.menus.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.messages.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.theme.css":1,"sites\/all\/modules\/fitvids\/fitvids.css":1,"modules\/node\/node.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/aggregator\/aggregator.theme.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/field\/field.theme.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/iwapi\/css\/elements.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/search\/search.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"sites\/all\/modules\/custom\/iwapi\/css\/composer.css":1,"sites\/all\/libraries\/colorbox\/example2\/colorbox.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/video\/css\/video.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/onecol\/onecol.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/split_rtl\/split-rtl-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/split_block\/split-block-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/cta_block\/cta-block-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/cta_links\/cta-links-layout.css":1,"sites\/all\/modules\/entity_background\/module\/entity_background_image\/plugins\/entity_background\/image.css":1,"sites\/all\/modules\/colorbox_swipe\/colorbox_swipe.css":1,"sites\/all\/themes\/massart2016\/css\/owl.carousel.min.css":1,"sites\/all\/themes\/massart2016\/css\/owl-slider.theme.css":1,"\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.6.3\/css\/font-awesome.min.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.normalize.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.hacks.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.styles.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.no-query.css":1,"all:0":1}},"colorbox":{"transition":"none","speed":"350","opacity":"0.90","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u0026#xf104;","next":"\u0026#xf105;","close":"\u0026#xf00d;","overlayClose":true,"returnFocus":true,"maxWidth":"100%","maxHeight":"100%","initialWidth":"100%","initialHeight":"100%","fixed":true,"scrolling":true,"mobiledetect":false,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"entity_background_image":{"#entity-bean-6":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/gallery_bg_0.jpg?itok=xVON5CF6","style":null},"#entity-bean-11":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/difference_bg_0.jpg?itok=WPT_aJ1E","style":null},"#entity-bean-16":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/skyline_0.jpg?itok=rnFF2-y6","style":null},"#entity-bean-21":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/makehappen_bg.jpg?itok=zyRG_PY5","style":null}},"fitvids":{"custom_domains":[],"selectors":["body"],"simplifymarkup":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"iwapiComposer":[],"iwapiThemeConfig":{"stickyEl":{"selector":".l-header"}},"massart2016":{"breakpoints":["(max-width: 670px)"]},"urlIsAjaxTrusted":{"\/":true}});</script>
-  <link href="./MassArt __files/saved_resource" rel="stylesheet" type="text/css">
-  <!-- Enabling Ping so we can track remote web access across institutional web properties outside of Slate and correlate those accesses with records in Slate. -->
-  <script async="async" src="./MassArt __files/ping">/**/</script>
-<script async="" src="./MassArt __files/ping(1)"></script><script type="text/javascript" async="" src="./MassArt __files/no_jq_dpm_59129aacfb6cebbe2c52f30ef3424209f7252e82.min.js"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.fc-ab-root { display: none !important } body > div.fc-ab-root { display: none !important } .fbs-auth__container.fbs-auth__adblock { display: none !important } .overlay-34_Kj { display: none !important } .wrapper-3AzfF { display: none !important } .fEy1Z2XT { display: none !important } .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG { display: none !important } .tp-modal { display: none !important } .tp-backdrop.tp-active { display: none !important } .c-nudge__container.c-gate__container { display: none !important } .c-nudge__container.c-regGate__container { display: none !important } .css-n7r8pg { display: none !important } .css-1bd8bfl { display: none !important } .overlay__59af11e2 { display: none !important } .tp_modal { display: none !important } .tp-backdrop.tp-active { display: none !important } div[class^='sp_message_container'] { display: none !important } div[class^='sp_veil'] { display: none !important } </style></head>
-<body class="html front not-logged-in page-home header-overlay" style="">
-  <div id="skiptocontent"><a href="https://massart.edu/#main-content" class="element-invisible element-focusable">Skip to main content</a></div>
-    
+    <script src="MassArt%20__files/js_CPltpj-VbJGsOxM0pVonxxrrWZnzRPbLB12bq7cdvR8.js"></script>
+    <script src="MassArt%20__files/js_meavKg15eZjNWFDGbeKx7N1ZLUkm5QoiSmfXqyHLl0M.js"></script>
+    <style type="text/css"></style>
+    <script src="MassArt%20__files/js_nGeLZMZFt9_j7e4FAcjK8y8-JhrJ2kArwz0FTQsk6ks.js"></script>
+    <script>
+        document.createElement( "picture" );
+    </script>
+    <script src="MassArt%20__files/js_CPHJmZu2sPN6DE7yCu9EvYmLd4BvN-38jzRlPJjnG2Q.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)%7D)(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-6293868-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+    </script>
+    <script src="MassArt%20__files/js_fxpnY1LvgHpFKzduu6HqLDmO5KB1dw50KqUpYIBXDIc.js"></script>
+    <script src="MassArt%20__files/js_r9ROdO-qe3onRCJU3SnaAoMcsNUSTM9j4ntUQ43ALxc.js"></script>
+    <script>
+        jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"massart2016","theme_token":"AF7aKdgADTdtPZK0Y-Nl_TAGOW22Grwz1PpNQu4r2zI","jquery_version":"1.10","js":{"sites\/all\/modules\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/picture\/picture.min.js":1,"sites\/all\/libraries\/jquery.event.move\/js\/jquery.event.move.js":1,"sites\/all\/libraries\/jquery.event.swipe\/js\/jquery.event.swipe.js":1,"sites\/all\/modules\/colorbox_swipe\/colorbox_swipe.js":1,"sites\/all\/modules\/addthis\/addthis.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/composer.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/omega\/omega\/js\/no-js.js":1,"sites\/all\/libraries\/fitvids\/jquery.fitvids.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/iwapi.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery.form\/3\/jquery.form.min.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/spin.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/iwapi\/js\/ajax.js":1,"sites\/all\/themes\/massart2016\/js\/page-header.js":1,"sites\/all\/modules\/fitvids\/fitvids.js":1,"sites\/all\/themes\/massart2016\/js\/mobile.behaviors.js":1,"sites\/all\/themes\/massart2016\/js\/owl.carousel.min.js":1,"0":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/imagesloaded.pkgd.min.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/video\/js\/video.js":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/masonry.pkgd.min.js":1,"misc\/progress.js":1,"sites\/all\/modules\/entity_background\/module\/entity_background_image\/plugins\/entity_background\/image.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/massart2016\/js\/jquery.nicescroll.min.js":1,"sites\/all\/themes\/massart2016\/js\/global.js":1,"sites\/all\/themes\/massart2016\/js\/jquery.cookie.js":1,"sites\/all\/modules\/custom\/massart_gallery\/js\/gallery-behaviors.js":1},"css":{"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.menus.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.messages.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/system\/system.theme.css":1,"sites\/all\/modules\/fitvids\/fitvids.css":1,"modules\/node\/node.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/aggregator\/aggregator.theme.css":1,"sites\/all\/modules\/picture\/picture_wysiwyg.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/field\/field.theme.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/iwapi\/css\/elements.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/search\/search.theme.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.base.css":1,"sites\/all\/themes\/omega\/omega\/css\/modules\/user\/user.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"sites\/all\/modules\/custom\/iwapi\/css\/composer.css":1,"sites\/all\/libraries\/colorbox\/example2\/colorbox.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/video\/css\/video.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/onecol\/onecol.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/split_rtl\/split-rtl-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/split_block\/split-block-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/cta_block\/cta-block-layout.css":1,"sites\/all\/modules\/custom\/massart_core\/plugins\/layouts\/cta_links\/cta-links-layout.css":1,"sites\/all\/modules\/entity_background\/module\/entity_background_image\/plugins\/entity_background\/image.css":1,"sites\/all\/modules\/colorbox_swipe\/colorbox_swipe.css":1,"sites\/all\/themes\/massart2016\/css\/owl.carousel.min.css":1,"sites\/all\/themes\/massart2016\/css\/owl-slider.theme.css":1,"\/\/maxcdn.bootstrapcdn.com\/font-awesome\/4.6.3\/css\/font-awesome.min.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.normalize.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.hacks.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.styles.css":1,"sites\/all\/themes\/massart2016\/css\/massart2016.no-query.css":1,"all:0":1}},"colorbox":{"transition":"none","speed":"350","opacity":"0.90","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u0026#xf104;","next":"\u0026#xf105;","close":"\u0026#xf00d;","overlayClose":true,"returnFocus":true,"maxWidth":"100%","maxHeight":"100%","initialWidth":"100%","initialHeight":"100%","fixed":true,"scrolling":true,"mobiledetect":false,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"entity_background_image":{"#entity-bean-6":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/gallery_bg_0.jpg?itok=xVON5CF6","style":null},"#entity-bean-11":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/difference_bg_0.jpg?itok=WPT_aJ1E","style":null},"#entity-bean-16":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/skyline_0.jpg?itok=rnFF2-y6","style":null},"#entity-bean-21":{"image":"https:\/\/massart.edu\/sites\/default\/files\/styles\/original\/public\/makehappen_bg.jpg?itok=zyRG_PY5","style":null}},"fitvids":{"custom_domains":[],"selectors":["body"],"simplifymarkup":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"iwapiComposer":[],"iwapiThemeConfig":{"stickyEl":{"selector":".l-header"}},"massart2016":{"breakpoints":["(max-width: 670px)"]},"urlIsAjaxTrusted":{"\/":true}});
+    </script>
+    <link href="MassArt%20__files/saved_resource" rel="stylesheet" type="text/css">
+    <!-- Enabling Ping so we can track remote web access across institutional web properties outside of Slate and correlate those accesses with records in Slate. -->
+    <script async="async" src="MassArt%20__files/ping">
+        /**/
+    </script>
+    <script async="" src="MassArt%20__files/ping(1)"></script>
+    <script type="text/javascript" async="" src="MassArt%20__files/no_jq_dpm_59129aacfb6cebbe2c52f30ef3424209f7252e82.min.js"></script>
+    <style id="fit-vids-style">
+        .fluid-width-video-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 0;
+        }
+        
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <style type="text/css">
+        .fc-ab-root {
+            display: none !important
+        }
+        
+        body>div.fc-ab-root {
+            display: none !important
+        }
+        
+        .fbs-auth__container.fbs-auth__adblock {
+            display: none !important
+        }
+        
+        .overlay-34_Kj {
+            display: none !important
+        }
+        
+        .wrapper-3AzfF {
+            display: none !important
+        }
+        
+        .fEy1Z2XT {
+            display: none !important
+        }
+        
+        .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG {
+            display: none !important
+        }
+        
+        .tp-modal {
+            display: none !important
+        }
+        
+        .tp-backdrop.tp-active {
+            display: none !important
+        }
+        
+        .c-nudge__container.c-gate__container {
+            display: none !important
+        }
+        
+        .c-nudge__container.c-regGate__container {
+            display: none !important
+        }
+        
+        .css-n7r8pg {
+            display: none !important
+        }
+        
+        .css-1bd8bfl {
+            display: none !important
+        }
+        
+        .overlay__59af11e2 {
+            display: none !important
+        }
+        
+        .tp_modal {
+            display: none !important
+        }
+        
+        .tp-backdrop.tp-active {
+            display: none !important
+        }
+        
+        div[class^='sp_message_container'] {
+            display: none !important
+        }
+        
+        div[class^='sp_veil'] {
+            display: none !important
+        }
+    </style>
+    <style class="silex-inline-styles" type="text/css">
+        .silex-id-1663018020100-0 {
+            min-width: 100%;
+        }
+    </style>
+    <script type="text/javascript" class="silex-json-styles">
+        [{"desktop":{"silex-id-1663018020100-0":{"min-width":"100%"}},"mobile":{},"componentData":{}}]
+    </script>
+    <style type="text/css" class="silex-style"></style>
+    <script type="text/javascript" class="silex-script"></script>
 
-<div class="l-message-bar">
-    <div class="l-region l-region--highlighted">
-    <div id="block-block-6" class="block block--block block--block-6">
-        <h2 class="block__title">FALL 2022 CAMPUS UPDATES</h2>
-      <div class="block__content">
-    <p><a href="http://massart.edu/return" target="_self">COVID Guidelines, Visitor Policies, and more</a></p>
-  </div>
-</div>
-  </div>
+    <!-- Silex HEAD tag do not remove -->
+    <!-- End of Silex HEAD tag do not remove -->
+</head>
+
+<body class="html front not-logged-in page-home header-overlay container-element silex-id-1663018020100-0 silex-runtime" data-silex-type="container" data-silex-id="silex-id-1663018020100-0">
+    <div id="skiptocontent"><a href="https://massart.edu/#main-content" class="element-invisible element-focusable">Skip to main content</a></div>
+
+
+    <div class="l-message-bar">
+        <div class="l-region l-region--highlighted">
+            <div id="block-block-6" class="block block--block block--block-6">
+                <h2 class="block__title">FALL 2022 CAMPUS UPDATES</h2>
+                <div class="block__content">
+                    <p><a href="http://massart.edu/return" target="_self">COVID Guidelines, Visitor Policies, and more</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-<div class="page-content-wrapper clearfix iwapi-dockto" style="position: relative;">
-  <div class="docked-placeholder" style="position: absolute; height: 75px;"><div class="docked-wrapper docked-top docked-region docked" style="z-index: 500; position: fixed; left: 0px; top: 0px; width: 100%;"><header class="l-header docked-item" role="banner" id="docker-0" style="position: static; display: flex;">
-    <div class="l-branding">
-              <a href="https://massart.edu/" title="Home" rel="home" class="site-logo"><img src="./MassArt __files/logo.png" alt="Home"></a>
-      
-      
+    <div class="page-content-wrapper clearfix iwapi-dockto" style="position: relative;">
+        <div class="docked-placeholder" style="position: absolute; height: 75px;">
+            <div class="docked-wrapper docked-top docked-region docked" style="z-index: 500; position: fixed; left: 0px; top: 0px; width: 100%;">
+                <header class="l-header docked-item" role="banner" id="docker-0" style="position: static; display: flex;">
+                    <div class="l-branding">
+                        <a href="https://massart.edu/" title="Home" rel="home" class="site-logo"><img src="MassArt%20__files/logo.png" alt="Home"></a>
 
-          </div>
-    <div class="menu-container">
-      <div class="search-menu-icon">
-        <a href="https://massart.edu/#" class="search-toggle" role="search" aria-expanded="false"><i class="fa fa-search"></i>Toggle Search</a>
-      </div>
-        <div class="l-region l-region--header">
-    <nav aria-label="primary" id="block-menu-menu-cta-menu" role="navigation" class="block block--menu block--menu-menu-cta-menu">
-      
-  <ul class="menu"><li class="first leaf"><a href="https://massart.edu/visit">Visit</a></li>
-<li class="leaf"><a href="https://massart.edu/admissions">Apply</a></li>
-<li class="leaf"><a href="http://calendar.massart.edu/">Calendar</a></li>
-<li class="leaf"><a href="https://app.mobilecause.com/form/f2fnBQ?vid=rgom6">Give</a></li>
-<li class="last leaf"><a href="http://maam.massart.edu/">Museum</a></li>
-</ul></nav>
-<div id="block-search-form" role="search" class="block block--search block--search-form" aria-hidden="true">
-        <div class="block__content">
-    <form class="search-block-form" action="https://massart.edu/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
-      <h2 class="element-invisible">Search form</h2>
-    <div class="form-item form-type-textfield form-item-search-block-form">
-  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
- <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
-</div>
-<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-5q7tg_vyEfE1BMVZKOWqslQLkz6dTHIS_ts9zO8pghc">
-<input type="hidden" name="form_id" value="search_block_form">
-</div>
-</div></form>  </div>
-</div>
-  </div>
 
-    </div>
-    <div class="menu-toggle">
-      <button class="hamburger hamburger--spring" type="button" role="navigation" aria-expanded="false" aria-label="Main Menu">MENU <span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
-    </div>
-    <div class="navigation-container" aria-hidden="true">
-      <div class="search-container">
-        <div id="block-search-form--2" role="search" class="block block--search block--search-form--2">
-        <div class="block__content">
-    <form class="search-block-form--2" action="https://massart.edu/" method="post" id="search-block-form--2" accept-charset="UTF-8"><div><div class="container-inline">
-      <h2 class="element-invisible">Search form</h2>
-    <div class="form-item form-type-textfield form-item-search-block-form">
-  <label class="element-invisible" for="edit-search-block-form--4">Search </label>
- <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
-</div>
-<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-xd3uSWi7vC9Sa2e2cKdfzqO1ZOoFQ9CCpQQrkdQncAM">
-<input type="hidden" name="form_id" value="search_block_form">
-</div>
-</div></form>  </div>
-</div>
-      </div>
-        <div class="l-region l-region--navigation">
-    <nav aria-label="secondary" id="block-menu-block-2" role="navigation" class="block block--menu-block block--menu-block-2">
-      
-  <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
-  <ul class="menu"><li class="first expanded menu-mlid-3981" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/academics">Academics</a><ul class="menu"><li class="first leaf has-children menu-mlid-5896"><a href="https://massart.edu/academics/programs" title="A listing of academic degree programs at MassArt.">All Programs</a></li>
-<li class="leaf has-children menu-mlid-4106"><a href="https://massart.edu/undergraduate-programs">Undergraduate Programs</a></li>
-<li class="leaf menu-mlid-8411"><a href="https://massart.edu/graduate-programs">Graduate Programs</a></li>
-<li class="leaf has-children menu-mlid-20751"><a href="https://massart.edu/certificates">Certificate Programs</a></li>
-<li class="leaf has-children menu-mlid-4431"><a href="https://massart.edu/course-spotlights">Course Spotlights</a></li>
-<li class="leaf has-children menu-mlid-8641"><a href="https://massart.edu/faculty">Faculty</a></li>
-<li class="leaf has-children menu-mlid-4436"><a href="https://massart.edu/facilities">Facilities</a></li>
-<li class="leaf has-children menu-mlid-4441"><a href="https://massart.edu/study-abroad-travel-courses">Study Abroad</a></li>
-<li class="leaf has-children menu-mlid-4456"><a href="https://massart.edu/library">Library</a></li>
-<li class="leaf has-children menu-mlid-4461"><a href="https://massart.edu/academic-resource-center">Academic Support</a></li>
-<li class="leaf has-children menu-mlid-8781"><a href="https://massart.edu/careerdevelopment">Career Development</a></li>
-<li class="last leaf has-children menu-mlid-8831"><a href="https://massart.edu/registrar">Registrar</a></li>
-</ul></li>
-<li class="expanded menu-mlid-4071" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/admissions">Admissions &amp; Financial Aid</a><ul class="menu"><li class="first leaf has-children menu-mlid-4476"><a href="https://massart.edu/undergraduate-admissions">Undergraduate Admissions</a></li>
-<li class="leaf has-children menu-mlid-9001"><a href="https://massart.edu/graduate-admissions">Graduate Admissions</a></li>
-<li class="leaf has-children menu-mlid-9031"><a href="https://massart.edu/design-certificates">Design Certificates</a></li>
-<li class="leaf menu-mlid-9271"><a href="https://massart.edu/veterans">Veterans</a></li>
-<li class="leaf menu-mlid-9036"><a href="https://massart.edu/admissions-policies">Admissions Policies</a></li>
-<li class="leaf has-children menu-mlid-9056"><a href="https://massart.edu/tuition-and-fees">Tuition and Fees</a></li>
-<li class="leaf has-children menu-mlid-9086"><a href="https://massart.edu/financial-aid">Financial Aid</a></li>
-<li class="leaf has-children menu-mlid-9046"><a href="https://massart.edu/visit">Visit MassArt</a></li>
-<li class="last leaf menu-mlid-9051"><a href="https://massart.edu/contact-us">Meet the Admissions Team</a></li>
-</ul></li>
-<li class="expanded menu-mlid-3976" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/student-life">Student Life</a><ul class="menu"><li class="first leaf has-children menu-mlid-9276"><a href="https://massart.edu/housing">Housing</a></li>
-<li class="leaf has-children menu-mlid-4556"><a href="https://massart.edu/dining">Dining</a></li>
-<li class="leaf has-children menu-mlid-16796"><a href="https://massart.edu/student-support">Student Support</a></li>
-<li class="leaf has-children menu-mlid-16801"><a href="https://massart.edu/student-services">Student Services</a></li>
-<li class="leaf has-children menu-mlid-12796"><a href="https://massart.edu/student-handbook">Student Handbook</a></li>
-<li class="leaf menu-mlid-9476"><a href="https://massart.edu/consortia">Colleges of the Fenway &amp; ProArts</a></li>
-<li class="leaf has-children menu-mlid-5936"><a href="https://massart.edu/student-life/get-involved">Get Involved</a></li>
-<li class="leaf menu-mlid-4561"><a href="https://massart.edu/sports-recreation-and-wellness">Sports &amp; Recreation</a></li>
-<li class="leaf menu-mlid-4616"><a href="https://massart.edu/living-boston">Living in Boston</a></li>
-<li class="last leaf has-children menu-mlid-4601"><a href="https://massart.edu/cacp">Center for Art and Community Partnerships</a></li>
-</ul></li>
-<li class="expanded menu-mlid-4086" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/continuing-education">Continuing Education</a><ul class="menu"><li class="first leaf has-children menu-mlid-9606"><a href="https://massart.edu/adults">Adults</a></li>
-<li class="leaf has-children menu-mlid-9636"><a href="https://massart.edu/youth-programs">Youth</a></li>
-<li class="leaf menu-mlid-9701"><a href="https://massart.edu/parking">Parking</a></li>
-<li class="last leaf menu-mlid-9706"><a href="https://massart.edu/pce-contact-us">Contact Us</a></li>
-</ul></li>
-<li class="expanded menu-mlid-4091" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/explore">Explore</a><ul class="menu"><li class="first leaf menu-mlid-4651"><a href="https://massart.edu/gallery">Student, Faculty, &amp; Alumni Work</a></li>
-<li class="leaf has-children menu-mlid-9741"><a href="https://massart.edu/galleries/massart-art-museum">MassArt Art Museum</a></li>
-<li class="leaf has-children menu-mlid-4666"><a href="https://massart.edu/campusgalleries">MassArt Galleries</a></li>
-<li class="leaf menu-mlid-4661"><a href="https://massart.edu/visiting-artists">Visiting Artists &amp; Lectures</a></li>
-<li class="leaf has-children menu-mlid-24061"><a href="https://massart.edu/annual-events">Annual Events</a></li>
-<li class="last leaf menu-mlid-4701"><a href="http://calendar.massart.edu/" target="_blank">Calendar</a></li>
-</ul></li>
-<li class="last expanded menu-mlid-4096" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/about">About MassArt</a><ul class="menu"><li class="first leaf has-children menu-mlid-4706"><a href="https://massart.edu/college-leadership">College Leadership</a></li>
-<li class="leaf has-children menu-mlid-25931"><a href="https://massart.edu/our-vision-future">Our Vision for the Future</a></li>
-<li class="leaf has-children menu-mlid-9596"><a href="https://massart.edu/jet">Justice, Equity, and Transformation</a></li>
-<li class="leaf has-children menu-mlid-17366"><a href="https://massart.edu/ensuring-a-safe-campus">Ensuring a Safe Campus</a></li>
-<li class="leaf menu-mlid-12781"><a href="https://massart.edu/institutional-effectiveness">Institutional Effectiveness</a></li>
-<li class="leaf has-children menu-mlid-9601"><a href="https://massart.edu/news">News</a></li>
-<li class="leaf menu-mlid-4696"><a href="https://massart.edu/stories">MassArt Stories</a></li>
-<li class="leaf has-children menu-mlid-4101"><a href="https://massart.edu/giving">Giving</a></li>
-<li class="leaf menu-mlid-15621"><a href="https://massart.edu/jobs">Working at MassArt</a></li>
-<li class="last leaf has-children menu-mlid-4731"><a href="https://massart.edu/contactus">Contact Us &amp; Visit</a></li>
-</ul></li>
-</ul></div>
-</nav>
-<nav aria-label="tertiary" id="block-menu-menu-academic-menu" role="navigation" class="block block--menu block--menu-menu-academic-menu">
-      
-  <ul class="menu"><li class="first leaf"><a href="https://massart.edu/for-students">Current Students</a></li>
-<li class="collapsed"><a href="https://massart.edu/alumni">Alumni</a></li>
-<li class="last leaf"><a href="https://massart.edu/directory">Faculty &amp; Staff Directory</a></li>
-</ul></nav>
-  </div>
-      <nav aria-label="primary mobile" id="block-menu-menu-cta-menu--2" role="navigation" class="block block--menu block--menu-menu-cta-menu--2">
-      
-  <ul class="menu"><li class="first leaf"><a href="https://massart.edu/visit">Visit</a></li>
-<li class="leaf"><a href="https://massart.edu/admissions">Apply</a></li>
-<li class="leaf"><a href="http://calendar.massart.edu/">Calendar</a></li>
-<li class="leaf"><a href="https://app.mobilecause.com/form/f2fnBQ?vid=rgom6">Give</a></li>
-<li class="last leaf"><a href="http://maam.massart.edu/">Museum</a></li>
-</ul></nav>
-    </div>
-  </header></div></div>
 
-<div class="l-page has-no-sidebars">
-  <div class="l-main">
-    <div class="clearfix">
-            <div class="l-content" role="main">
-        <a id="main-content"></a>
-                                                                          <main role="main">
-            <div class="panel-display panel-1col clearfix">
-  <div class="panel-panel panel-col">
-    <div><div class="panel-pane pane-massart-hero pane-3936">
-            
-<div class="entity entity-non-folio non-folio-hero has-video clearfix">
-  <div class="field field--name-field-ambient-bg field--type-image field--label-hidden" style="background-image: url(&quot;https://massart.edu/sites/default/files/styles/original/public/hero/B-Roll-Mix-Edit.png?itok=f8IEt-dz&amp;timestamp=1660662841&quot;); background-size: cover; background-position: center center;"><div class="field__items"><div class="field__item even"><div id="file-38586" class="file file-image file-image-png">
+                    </div>
+                    <div class="menu-container">
+                        <div class="search-menu-icon">
+                            <a href="https://massart.edu/" class="search-toggle" role="search" aria-expanded="false"><i class="fa fa-search"></i>Toggle Search</a>
+                        </div>
+                        <div class="l-region l-region--header">
+                            <nav aria-label="primary" id="block-menu-menu-cta-menu" role="navigation" class="block block--menu block--menu-menu-cta-menu">
 
-        <h2 class="element-invisible"><a href="https://massart.edu/files/b-roll-mix-editpng">B-Roll-Mix-Edit.png</a></h2>
-    
-  
-  <div class="content">
-    <picture title="MassArt Studios still photo captured from The Joy of MassArt series, Spring 2022. Video by Piyu Somani, courtesy of MassArt Marketing and Communications.">
-<!--[if IE 9]><video style="display: none;"><![endif]-->
-<source srcset="https://massart.edu/sites/default/files/styles/original/public/hero/B-Roll-Mix-Edit.png?itok=f8IEt-dz&amp;timestamp=1660662841 1x" media="(min-width: 971px)">
-<source srcset="https://massart.edu/sites/default/files/styles/hero_mobile/public/hero/B-Roll-Mix-Edit.png?itok=Jq5C3M6G&amp;timestamp=1660662841 1x" media="(max-width: 670px)">
-<!--[if IE 9]></video><![endif]-->
-<img src="./MassArt __files/B-Roll-Mix-Edit.png" alt="MassArt Studios screen capture from video b-roll, Spring 2022. " title="MassArt Studios still photo captured from The Joy of MassArt series, Spring 2022. Video by Piyu Somani, courtesy of MassArt Marketing and Communications." style="opacity: 0;">
-</picture>  </div>
+                                <ul class="menu">
+                                    <li class="first leaf"><a href="https://massart.edu/visit">Visit</a></li>
+                                    <li class="leaf"><a href="https://massart.edu/admissions">Apply</a></li>
+                                    <li class="leaf"><a href="http://calendar.massart.edu/">Calendar</a></li>
+                                    <li class="leaf"><a href="https://app.mobilecause.com/form/f2fnBQ?vid=rgom6">Give</a></li>
+                                    <li class="last leaf"><a href="http://maam.massart.edu/">Museum</a></li>
+                                </ul>
+                            </nav>
+                            <div id="block-search-form" role="search" class="block block--search block--search-form" aria-hidden="true">
+                                <div class="block__content">
+                                    <form class="search-block-form" action="https://massart.edu/" method="post" id="search-block-form" accept-charset="UTF-8">
+                                        <div>
+                                            <div class="container-inline">
+                                                <h2 class="element-invisible">Search form</h2>
+                                                <div class="form-item form-type-textfield form-item-search-block-form">
+                                                    <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+                                                    <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
+                                                </div>
+                                                <div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-5q7tg_vyEfE1BMVZKOWqslQLkz6dTHIS_ts9zO8pghc">
+                                                <input type="hidden" name="form_id" value="search_block_form">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
 
-  
-</div>
-</div></div></div><div class="field field--name-field-ambient-video field--type-video field--label-hidden"><div class="field__items"><div class="field__item even"><video preload="auto" muted="muted" autoplay="autoplay" loop="loop" width="1200" height="675"><source type="video/mp4" src="https://massart.edu/sites/default/files/hero/video/B%20Roll%20Mix%202.mp4">
+                    </div>
+                    <div class="menu-toggle">
+                        <button class="hamburger hamburger--spring" type="button" role="navigation" aria-expanded="false" aria-label="Main Menu">MENU <span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+                    </div>
+                    <div class="navigation-container" aria-hidden="true">
+                        <div class="search-container">
+                            <div id="block-search-form--2" role="search" class="block block--search block--search-form--2">
+                                <div class="block__content">
+                                    <form class="search-block-form--2" action="https://massart.edu/" method="post" id="search-block-form--2" accept-charset="UTF-8">
+                                        <div>
+                                            <div class="container-inline">
+                                                <h2 class="element-invisible">Search form</h2>
+                                                <div class="form-item form-type-textfield form-item-search-block-form">
+                                                    <label class="element-invisible" for="edit-search-block-form--4">Search </label>
+                                                    <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--4" name="search_block_form" value="" size="15" maxlength="128" class="form-text">
+                                                </div>
+                                                <div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="" class="form-submit"></div><input type="hidden" name="form_build_id" value="form-xd3uSWi7vC9Sa2e2cKdfzqO1ZOoFQ9CCpQQrkdQncAM">
+                                                <input type="hidden" name="form_id" value="search_block_form">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-region l-region--navigation">
+                            <nav aria-label="secondary" id="block-menu-block-2" role="navigation" class="block block--menu-block block--menu-block-2">
+
+                                <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+                                    <ul class="menu">
+                                        <li class="first expanded menu-mlid-3981" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/academics">Academics</a>
+                                            <ul class="menu">
+                                                <li class="first leaf has-children menu-mlid-5896"><a href="https://massart.edu/academics/programs" title="A listing of academic degree programs at MassArt.">All Programs</a></li>
+                                                <li class="leaf has-children menu-mlid-4106"><a href="https://massart.edu/undergraduate-programs">Undergraduate Programs</a></li>
+                                                <li class="leaf menu-mlid-8411"><a href="https://massart.edu/graduate-programs">Graduate Programs</a></li>
+                                                <li class="leaf has-children menu-mlid-20751"><a href="https://massart.edu/certificates">Certificate Programs</a></li>
+                                                <li class="leaf has-children menu-mlid-4431"><a href="https://massart.edu/course-spotlights">Course Spotlights</a></li>
+                                                <li class="leaf has-children menu-mlid-8641"><a href="https://massart.edu/faculty">Faculty</a></li>
+                                                <li class="leaf has-children menu-mlid-4436"><a href="https://massart.edu/facilities">Facilities</a></li>
+                                                <li class="leaf has-children menu-mlid-4441"><a href="https://massart.edu/study-abroad-travel-courses">Study Abroad</a></li>
+                                                <li class="leaf has-children menu-mlid-4456"><a href="https://massart.edu/library">Library</a></li>
+                                                <li class="leaf has-children menu-mlid-4461"><a href="https://massart.edu/academic-resource-center">Academic Support</a></li>
+                                                <li class="leaf has-children menu-mlid-8781"><a href="https://massart.edu/careerdevelopment">Career Development</a></li>
+                                                <li class="last leaf has-children menu-mlid-8831"><a href="https://massart.edu/registrar">Registrar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="expanded menu-mlid-4071" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/admissions">Admissions &amp; Financial Aid</a>
+                                            <ul class="menu">
+                                                <li class="first leaf has-children menu-mlid-4476"><a href="https://massart.edu/undergraduate-admissions">Undergraduate Admissions</a></li>
+                                                <li class="leaf has-children menu-mlid-9001"><a href="https://massart.edu/graduate-admissions">Graduate Admissions</a></li>
+                                                <li class="leaf has-children menu-mlid-9031"><a href="https://massart.edu/design-certificates">Design Certificates</a></li>
+                                                <li class="leaf menu-mlid-9271"><a href="https://massart.edu/veterans">Veterans</a></li>
+                                                <li class="leaf menu-mlid-9036"><a href="https://massart.edu/admissions-policies">Admissions Policies</a></li>
+                                                <li class="leaf has-children menu-mlid-9056"><a href="https://massart.edu/tuition-and-fees">Tuition and Fees</a></li>
+                                                <li class="leaf has-children menu-mlid-9086"><a href="https://massart.edu/financial-aid">Financial Aid</a></li>
+                                                <li class="leaf has-children menu-mlid-9046"><a href="https://massart.edu/visit">Visit MassArt</a></li>
+                                                <li class="last leaf menu-mlid-9051"><a href="https://massart.edu/contact-us">Meet the Admissions Team</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="expanded menu-mlid-3976" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/student-life">Student Life</a>
+                                            <ul class="menu">
+                                                <li class="first leaf has-children menu-mlid-9276"><a href="https://massart.edu/housing">Housing</a></li>
+                                                <li class="leaf has-children menu-mlid-4556"><a href="https://massart.edu/dining">Dining</a></li>
+                                                <li class="leaf has-children menu-mlid-16796"><a href="https://massart.edu/student-support">Student Support</a></li>
+                                                <li class="leaf has-children menu-mlid-16801"><a href="https://massart.edu/student-services">Student Services</a></li>
+                                                <li class="leaf has-children menu-mlid-12796"><a href="https://massart.edu/student-handbook">Student Handbook</a></li>
+                                                <li class="leaf menu-mlid-9476"><a href="https://massart.edu/consortia">Colleges of the Fenway &amp; ProArts</a></li>
+                                                <li class="leaf has-children menu-mlid-5936"><a href="https://massart.edu/student-life/get-involved">Get Involved</a></li>
+                                                <li class="leaf menu-mlid-4561"><a href="https://massart.edu/sports-recreation-and-wellness">Sports &amp; Recreation</a></li>
+                                                <li class="leaf menu-mlid-4616"><a href="https://massart.edu/living-boston">Living in Boston</a></li>
+                                                <li class="last leaf has-children menu-mlid-4601"><a href="https://massart.edu/cacp">Center for Art and Community Partnerships</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="expanded menu-mlid-4086" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/continuing-education">Continuing Education</a>
+                                            <ul class="menu">
+                                                <li class="first leaf has-children menu-mlid-9606"><a href="https://massart.edu/adults">Adults</a></li>
+                                                <li class="leaf has-children menu-mlid-9636"><a href="https://massart.edu/youth-programs">Youth</a></li>
+                                                <li class="leaf menu-mlid-9701"><a href="https://massart.edu/parking">Parking</a></li>
+                                                <li class="last leaf menu-mlid-9706"><a href="https://massart.edu/pce-contact-us">Contact Us</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="expanded menu-mlid-4091" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/explore">Explore</a>
+                                            <ul class="menu">
+                                                <li class="first leaf menu-mlid-4651"><a href="https://massart.edu/gallery">Student, Faculty, &amp; Alumni Work</a></li>
+                                                <li class="leaf has-children menu-mlid-9741"><a href="https://massart.edu/galleries/massart-art-museum">MassArt Art Museum</a></li>
+                                                <li class="leaf has-children menu-mlid-4666"><a href="https://massart.edu/campusgalleries">MassArt Galleries</a></li>
+                                                <li class="leaf menu-mlid-4661"><a href="https://massart.edu/visiting-artists">Visiting Artists &amp; Lectures</a></li>
+                                                <li class="leaf has-children menu-mlid-24061"><a href="https://massart.edu/annual-events">Annual Events</a></li>
+                                                <li class="last leaf menu-mlid-4701"><a href="http://calendar.massart.edu/" target="_blank">Calendar</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="last expanded menu-mlid-4096" aria-expanded="false"><i class="fa menu-expander" tabindex="0"></i><a href="https://massart.edu/about">About MassArt</a>
+                                            <ul class="menu">
+                                                <li class="first leaf has-children menu-mlid-4706"><a href="https://massart.edu/college-leadership">College Leadership</a></li>
+                                                <li class="leaf has-children menu-mlid-25931"><a href="https://massart.edu/our-vision-future">Our Vision for the Future</a></li>
+                                                <li class="leaf has-children menu-mlid-9596"><a href="https://massart.edu/jet">Justice, Equity, and Transformation</a></li>
+                                                <li class="leaf has-children menu-mlid-17366"><a href="https://massart.edu/ensuring-a-safe-campus">Ensuring a Safe Campus</a></li>
+                                                <li class="leaf menu-mlid-12781"><a href="https://massart.edu/institutional-effectiveness">Institutional Effectiveness</a></li>
+                                                <li class="leaf has-children menu-mlid-9601"><a href="https://massart.edu/news">News</a></li>
+                                                <li class="leaf menu-mlid-4696"><a href="https://massart.edu/stories">MassArt Stories</a></li>
+                                                <li class="leaf has-children menu-mlid-4101"><a href="https://massart.edu/giving">Giving</a></li>
+                                                <li class="leaf menu-mlid-15621"><a href="https://massart.edu/jobs">Working at MassArt</a></li>
+                                                <li class="last leaf has-children menu-mlid-4731"><a href="https://massart.edu/contactus">Contact Us &amp; Visit</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <nav aria-label="tertiary" id="block-menu-menu-academic-menu" role="navigation" class="block block--menu block--menu-menu-academic-menu">
+
+                                <ul class="menu">
+                                    <li class="first leaf"><a href="https://massart.edu/for-students">Current Students</a></li>
+                                    <li class="collapsed"><a href="https://massart.edu/alumni">Alumni</a></li>
+                                    <li class="last leaf"><a href="https://massart.edu/directory">Faculty &amp; Staff Directory</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <nav aria-label="primary mobile" id="block-menu-menu-cta-menu--2" role="navigation" class="block block--menu block--menu-menu-cta-menu--2">
+
+                            <ul class="menu">
+                                <li class="first leaf"><a href="https://massart.edu/visit">Visit</a></li>
+                                <li class="leaf"><a href="https://massart.edu/admissions">Apply</a></li>
+                                <li class="leaf"><a href="http://calendar.massart.edu/">Calendar</a></li>
+                                <li class="leaf"><a href="https://app.mobilecause.com/form/f2fnBQ?vid=rgom6">Give</a></li>
+                                <li class="last leaf"><a href="http://maam.massart.edu/">Museum</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="l-page has-no-sidebars">
+            <div class="l-main">
+                <div class="clearfix">
+                    <div class="l-content" role="main">
+                        <a id="main-content"></a>
+                        <main role="main">
+                            <div class="panel-display panel-1col clearfix">
+                                <div class="panel-panel panel-col">
+                                    <div>
+                                        <div class="panel-pane pane-massart-hero pane-3936">
+
+                                            <div class="entity entity-non-folio non-folio-hero has-video clearfix">
+                                                <div class="field field--name-field-ambient-bg field--type-image field--label-hidden" style="background-image: url('https://massart.edu/sites/default/files/styles/original/public/hero/B-Roll-Mix-Edit.png?itok=f8IEt-dz&amp;timestamp=1660662841'); background-size: cover; background-position: center center;">
+                                                    <div class="field__items">
+                                                        <div class="field__item even">
+                                                            <div id="file-38586" class="file file-image file-image-png">
+
+                                                                <h2 class="element-invisible"><a href="https://massart.edu/files/b-roll-mix-editpng">B-Roll-Mix-Edit.png</a></h2>
+
+
+                                                                <div class="content">
+                                                                    <picture title="MassArt Studios still photo captured from The Joy of MassArt series, Spring 2022. Video by Piyu Somani, courtesy of MassArt Marketing and Communications.">
+                                                                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                                        <source srcset="https://massart.edu/sites/default/files/styles/original/public/hero/B-Roll-Mix-Edit.png?itok=f8IEt-dz&amp;timestamp=1660662841 1x" media="(min-width: 971px)">
+                                                                        <source srcset="https://massart.edu/sites/default/files/styles/hero_mobile/public/hero/B-Roll-Mix-Edit.png?itok=Jq5C3M6G&amp;timestamp=1660662841 1x" media="(max-width: 670px)">
+                                                                        <!--[if IE 9]></video><![endif]-->
+                                                                        <img src="MassArt%20__files/B-Roll-Mix-Edit.png" alt="MassArt Studios screen capture from video b-roll, Spring 2022. " title="MassArt Studios still photo captured from The Joy of MassArt series, Spring 2022. Video by Piyu Somani, courtesy of MassArt Marketing and Communications."
+                                                                            style="opacity: 0;">
+                                                                    </picture>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field field--name-field-ambient-video field--type-video field--label-hidden">
+                                                    <div class="field__items">
+                                                        <div class="field__item even"><video preload="auto" muted="muted" autoplay="autoplay" loop="loop" width="1200" height="675"><source type="video/mp4" src="https://massart.edu/sites/default/files/hero/video/B%20Roll%20Mix%202.mp4">
 </video>
-</div></div></div>  <div class="overlay-content">
-   <h1>The Joy of MassArt</h1>    <div class="field field--name-field-hero-message field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><p>Students have access to nearly one million square feet of studio, classroom, living and exhibition space.</p></div></div></div>  </div>
-</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="overlay-content">
+                                                    <h1>The Joy of MassArt</h1>
+                                                    <div class="field field--name-field-hero-message field--type-text-long field--label-hidden">
+                                                        <div class="field__items">
+                                                            <div class="field__item even">
+                                                                <p>Students have access to nearly one million square feet of studio, classroom, living and exhibition space.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-block pane-bean-program-links">
+                                            <div class="entity entity-bean bean-split-content clearfix" id="entity-bean-1">
+
+                                                <div class="content">
+                                                    <div class="iwapi-regions panel-display panel-display--split-rtl clearfix">
+                                                        <div class="layout-region content-right">
+                                                            <div class="field field--name-field-secondary-content field--type-text-long field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <h4>Programs</h4>
+
+                                                                        <ul class="inline-menu">
+                                                                            <li><a href="https://massart.edu/node/286">Undergraduate</a></li>
+                                                                            <li><a href="https://massart.edu/node/601">Graduate</a>&nbsp;</li>
+                                                                            <li><a href="https://massart.edu/node/606">Certificate</a>&nbsp;</li>
+                                                                        </ul>
+
+                                                                        <h4><br>Continuing Education</h4>
+
+                                                                        <ul class="inline-menu">
+                                                                            <li><a href="https://massart.edu/node/3361">Adults</a></li>
+                                                                            <li><a href="https://massart.edu/node/3396">Youth</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layout-region content-left">
+                                                            <div class="field field--name-field-messaging field--type-text-long field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <p class="mission-statement">Our academic and co-curricular programs prepare&nbsp;artists, designers, and educators from diverse backgrounds to shape communities, economies, and cultures for the common good.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-custom pane-1 welcome_students">
+                                            <table border="0" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="width: 33%; background-color: rgb(243, 228, 229); padding: 3%; text-align: left; vertical-align: top; border-color: rgb(243, 228, 229);">
+                                                            <h4>&nbsp;</h4>
+                                                            <h4>Admissions applications are now available for Fall 2023!</h4>
+                                                            <p><br><a class="trapezoid" href="https://massart.edu/apply">Learn how to apply</a></p>
+                                                        </td>
+                                                        <td>
+                                                            <div class="media media-element-container media-default">
+                                                                <div id="file-38056" class="file file-image file-image-jpeg">
+
+                                                                    <h2 class="element-invisible"><a href="https://massart.edu/files/sabrinaflatlayherojpg">sabrinaflatlay_hero.jpg</a></h2>
+
+
+                                                                    <div class="content">
+                                                                        <img alt="Sabrina's hands typing on a computer" title="Screenshot from In the Car, Directed by Dillon Buss, Produced by Susie Stockwell" class="media-element file-default" data-delta="9" src="MassArt%20__files/sabrinaflatlay_hero.jpg" width="1200" height="798">                                                                        </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="panel-pane pane-views pane-new-highlights">
+                                            <h2 class="pane-title">MassArt In the News</h2>
+                                            <div class="view view-new-highlights view-id-new_highlights view-display-id-block inline-rows view-dom-id-043d6238c5d305c982689649b5548e95">
+
+
+
+                                                <div class="view-content">
+                                                    <div class="views-row views-row-1">
+
+                                                        <div class="views-field views-field-field-image">
+                                                            <div class="field-content">
+                                                                <a href="https://massart.edu/news/2022/08/artist-steve-locke-awarded-rappaport-prize-decordova-sculpture-park-and-museum"><img src="MassArt%20__files/KXGMSHWGUQS6BVAZMAK4IG3GNM.jpeg" width="400" height="260" alt="Artist Steve Locke has won the deCordova Sculpture Park and Museum's Rappaport Prize." title="Artist Steve Locke has won the deCordova Sculpture Park and Museum's Rappaport Prize. Image source: Boston Globe, courtesy of the artist."></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-field views-field-title"> <span class="field-content"><a href="https://massart.edu/news/2022/08/artist-steve-locke-awarded-rappaport-prize-decordova-sculpture-park-and-museum">Artist Steve Locke awarded Rappaport Prize by deCordova Sculpture Park and Museum</a></span>                                                            </div>
+                                                        <div class="views-field views-field-field-news-src">
+                                                            <div class="field-content"><strong><span class="date-display-single">August 25</span></strong> Boston Globe</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="views-row views-row-2">
+
+                                                        <div class="views-field views-field-field-image">
+                                                            <div class="field-content">
+                                                                <a href="https://massart.edu/news/2022/08/genevieve-gaignards-new-exhibition-rowan-university-art-gallery-confronts-racial-and"><img src="MassArt%20__files/Rowan-August5.jpeg" width="400" height="260" alt="Vanilla Ice, 2016 Edition 3 of 3, Chromogenic print 24 x 36 inches Courtesy of the artist and Vielmetter Los Angeles Photo credit: Jeff Mclane"
+                                                                        title="Genevieve Gaignard's &quot;Vanilla Ice,&quot; 2016 Edition 3 of 3, Chromogenic print 24 x 36 inches Courtesy of the artist and Vielmetter Los Angeles Photo credit: Jeff Mclane"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-field views-field-title"> <span class="field-content"><a href="https://massart.edu/news/2022/08/genevieve-gaignards-new-exhibition-rowan-university-art-gallery-confronts-racial-and">Genevieve Gaignard's New Exhibition at Rowan University Art Gallery Confronts Racial and Gender Stereotypes</a></span>                                                            </div>
+                                                        <div class="views-field views-field-field-news-src">
+                                                            <div class="field-content"><strong><span class="date-display-single">August 18</span></strong> New Jersey Stage</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="views-row views-row-3">
+
+                                                        <div class="views-field views-field-field-image">
+                                                            <div class="field-content">
+                                                                <a href="https://massart.edu/news/2022/08/massart-offer-workshops-expanded-programming-thanks-grant-mayor%E2%80%99s-office-arts-and"><img src="MassArt%20__files/MissionHillGazette.png" width="400" height="260" alt="Mission Hill Gazette logo" title="Mission Hill Gazette logo"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="views-field views-field-title"> <span class="field-content"><a href="https://massart.edu/news/2022/08/massart-offer-workshops-expanded-programming-thanks-grant-mayor%E2%80%99s-office-arts-and">MassArt to offer workshops; expanded programming thanks to grant from Mayor’s Office of Arts and Culture</a></span>                                                            </div>
+                                                        <div class="views-field views-field-field-news-src">
+                                                            <div class="field-content"><strong><span class="date-display-single">August 5</span></strong> Mission Hill Gazette</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-block pane-bean-primary-gallery-block">
+                                            <div class="entity entity-bean bean-gallery-block light-scheme clearfix eb-image" id="entity-bean-6" style="background-image: url('https://massart.edu/sites/default/files/styles/original/public/gallery_bg_0.jpg?itok=xVON5CF6');">
+
+                                                <div class="content">
+                                                    <div class="iwapi-regions panel-display panel-display--split-block clearfix">
+                                                        <div class="layout-region content-left">
+                                                            <div class="field field--name-eb-background field--type-field-collection field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
+                                                                            <div class="content">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field field--name-field-messaging field--type-text-long field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <h2>What<br>We Make</h2>
+
+                                                                        <p>View student, faculty, and alumni artwork from all disciplines.</p>
+
+                                                                        <p><a class="button blocks-icon" href="https://massart.edu/gallery">Interactive Gallery</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layout-region content-right">
+                                                            <div class="embedded-view embedded-content" id="embed-view-gallery-snippets">
+                                                                <div class="view view-gallery-snippets view-id-gallery_snippets view-display-id-default view-dom-id-011e0c9ce21dbbc2ce263a23bacba498">
+
+
+
+                                                                    <div class="view-content">
+
+                                                                        <div id="massart-gallery" class="massart-gallery ma-behaviors-processed">
+                                                                            <div class="gallery-content" style="position: relative; height: 755.25px;">
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 0px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20446/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Zhang_01_0.jpeg" width="480" height="384" alt="Ronghao Zhang (MFA ‘21 Photography), Curtain, 2021, archival inkjet print, 30″ x 24″" title="Ronghao Zhang (MFA ‘21 Photography), Curtain, 2021, archival inkjet print, 30″ x 24″">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 0px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20666/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Charity%20Be_Everythinginlifeisvibrationalberteinstein.jpg" width="480" height="240" alt="Charity Be (MFA ‘22 Fine Arts Low-Residency), Everything In Life Is Vibration Albert Einstein (Work-in-Progress), 2022" title="Charity Be (MFA ‘22 Fine Arts Low-Residency), Everything In Life Is Vibration Albert Einstein (Work-in-Progress), 2022">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 0px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20671/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Charity%20Be_feucht_3.JPG" width="480" height="360" alt="Charity Be (MFA ‘22 Fine Arts Low-Residency), Feucht (Work-in-Progress), 2022" title="Charity Be (MFA ‘22 Fine Arts Low-Residency), Feucht (Work-in-Progress), 2022">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 90px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20676/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Mikhail%20Kogan.png" width="480" height="269" alt="Mikhail Kogan (MFA ‘23 Fine Arts Low-Residency), Work-in-Progress, 2022" title="Mikhail Kogan (MFA ‘23 Fine Arts Low-Residency), Work-in-Progress, 2022">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 135px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19111/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Al%20Liu%20-%20Junior.png" width="337" height="480" alt="Artwork by Ali Liu" title="Artwork by Ali Liu"> <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 144px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19116/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Aliyah%20Pruitt%20-%20Alum.jpg" width="480" height="256" alt="Artwork by Aliyah Pruitt" title="Artwork by Aliyah Pruitt"> <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 190px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20561/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Barnard_02.jpeg" width="480" height="360" alt="Tabitha Barnard (MFA ‘21 Photography), Claw, 2021, archival inkjet print, 16” x 20”" title="Tabitha Barnard (MFA ‘21 Photography), Claw, 2021, archival inkjet print, 16” x 20”">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 240px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19136/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Jackson%20Carpenter%20-%20Junior.jpg" width="360" height="480" alt="Artwork by Jackson Carpenter" title="Artwork by Jackson Carpenter">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 325px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20566/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Eshun_01.jpeg" width="360" height="480" alt="Claudio Eshun (MFA ‘21 Photography), Unc.lue &amp; Nana, 2021, archival inkjet print, 24″ x 18″" title="Claudio Eshun (MFA ‘21 Photography), Unc.lue &amp; Nana, 2021, archival inkjet print, 24″ x 18″">                                                                                        <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+
+                                                                                <div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 391px;">
+
+                                                                                    <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19151/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
+
+                                                                                        <img src="MassArt%20__files/Sergine%20Muzac%20-%20Sophomore.jpg" width="294" height="480" alt="Artwork by Sergine Muzac" title="Artwork by Sergine Muzac"> <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
+                                                                                    </a>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <noscript></noscript>
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-block pane-bean-make-a-diff">
+                                            <div class="entity entity-bean bean-cta-block dark-scheme clearfix eb-image" id="entity-bean-11" style="background-image: url('https://massart.edu/sites/default/files/styles/original/public/difference_bg_0.jpg?itok=WPT_aJ1E');">
+
+                                                <div class="content">
+                                                    <div class="iwapi-regions panel-display panel-display--cta-block clearfix">
+                                                        <div class="layout-region content-main">
+                                                            <div class="field field--name-eb-background field--type-field-collection field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
+                                                                            <div class="content">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field field--name-field-messaging field--type-text-long field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <h2>Make a Difference</h2>
+
+                                                                        <p>MassArt supports its longstanding mission through public programs and educational offerings for local schools to make art and design accessible for all.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="paragraphs-items paragraphs-items-field-cta-primary paragraphs-items-field-cta-primary-full paragraphs-items-full">
+                                                                <div class="field field--name-field-cta-primary field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-primary">
+                                                                    <div class="field__items">
+                                                                        <div class="field__item even">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-primary-cta paragraphs-item-36 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/cacphome.jpg" width="800" height="480" alt="CACP" title="CACP"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/cacp">Center for Art and Community Partnerships</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layout-region sidebar-right">
+                                                            <div class="paragraphs-items paragraphs-items-field-cta-links paragraphs-items-field-cta-links-full paragraphs-items-full">
+                                                                <div class="field field--name-field-cta-links field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-links">
+                                                                    <div class="field__items">
+                                                                        <div class="field__item even">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-6 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/make_diff_2.jpg" width="480" height="288" alt="MassArt Legacy" title="MassArt Legacy"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/about">MassArt Legacy</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="field__item odd">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-11 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/ab_(massarthome).jpg" width="480" height="288" alt="MassArt student" title="MassArt student"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/artwardbound">Artward Bound</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="field__item even">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-16 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/galleryedhome.jpg" width="480" height="288" alt="Gallery Education" title="Gallery Education"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://maam.massart.edu/learn">Museum Education</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-block pane-bean-make-your-move">
+                                            <div class="entity entity-bean bean-cta-links dark-scheme clearfix eb-image" id="entity-bean-16" style="background-image: url('https://massart.edu/sites/default/files/styles/original/public/skyline_0.jpg?itok=rnFF2-y6');">
+
+                                                <div class="content">
+                                                    <div class="iwapi-regions panel-display panel-display--cta-links clearfix">
+                                                        <div class="layout-region content-main">
+                                                            <div class="field field--name-eb-background field--type-field-collection field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
+                                                                            <div class="content">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="field field--name-field-messaging field--type-text-long field--label-hidden">
+                                                                <div class="field__items">
+                                                                    <div class="field__item even">
+                                                                        <h2>Make<br>Your Move</h2>
+
+                                                                        <p>Located on the Avenue of the&nbsp;Arts in Boston, MassArt is an&nbsp;<br>incredible&nbsp;place for the merging of creative and innovative ideas.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="layout-region content-links">
+                                                            <div class="paragraphs-items paragraphs-items-field-cta-links paragraphs-items-field-cta-links-full paragraphs-items-full">
+                                                                <div class="field field--name-field-cta-links field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-links">
+                                                                    <div class="field__items">
+                                                                        <div class="field__item even">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-21 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/make_move_1.jpg" width="480" height="288" alt="Life at MassArt" title="Life at MassArt"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/student-life">Life at MassArt</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="field__item odd">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-26 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/make_move_2.jpg" width="480" height="288" alt="Living in Boston" title="Living in Boston"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/living-boston">Living in Boston</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="field__item even">
+                                                                            <div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-31 clearfix">
+                                                                                <div class="field field--name-field-bg-image field--type-image field--label-hidden">
+                                                                                    <div class="field__items">
+                                                                                        <div class="field__item even"><img src="MassArt%20__files/make_move_3.jpg" width="480" height="288" alt="Career Development" title="Career Development"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="overlay-content">
+                                                                                    <div class="field field--name-field-cta-link field--type-link-field field--label-hidden">
+                                                                                        <div class="field__items">
+                                                                                            <div class="field__item even"><a href="https://massart.edu/careerdevelopment">Career Development</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-pane pane-custom pane-2">
+                                            <p>&nbsp;</p>
+                                        </div>
+                                        <div class="panel-pane pane-custom pane-3 pane-events-localist">
+                                            <h2 class="pane-title">Events</h2>
+                                            <script type="text/javascript" src="MassArt%20__files/view"></script>
+                                            <div id="lw">
+                                                <div class="lw">
+                                                    <ul id="lwe">
+                                                        <li class="lwe">
+                                                            <div class="lwn"> <span class="lwn0"> Sep 12 - Oct 5 </span> <a href="https://calendar.massart.edu/event/from_darkness_to_light_and_back_again_doran_gallery?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design"
+                                                                    target="_blank">From Darkness To Light... and back again | Doran Gallery</a> </div>
+                                                            <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/dmc?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">Design and Media Center</a>                                                                </div>
+                                                        </li>
+                                                        <li class="lwe">
+                                                            <div class="lwn"> <span class="lwn0"> Sep 14 - Sep 25 </span> <a href="https://calendar.massart.edu/event/thew_new_drawing_room_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design"
+                                                                    target="_blank">The New Drawing Room // MassArt x SoWa</a> </div>
+                                                            <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/event/thew_new_drawing_room_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design"
+                                                                    target="_blank">MassArt x SoWa</a> </div>
+                                                        </li>
+                                                        <li class="lwe">
+                                                            <div class="lwn"> <span class="lwn0"> Sep 14 </span> <a href="https://calendar.massart.edu/event/philemona_williamson_artist_talk_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design"
+                                                                    target="_blank">Philemona Williamson Artist Talk | MassArt x SoWa</a> </div>
+                                                            <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/event/philemona_williamson_artist_talk_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design"
+                                                                    target="_blank">MassArt x SoWa</a> </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p><a class="button calendar-icon" href="https://calendar.massart.edu/" target="_blank">Full Calendar</a></p>
+                                        </div>
+                                        <div class="panel-pane pane-custom pane-4">
+                                            <p style="font-size:12px;"><em>Featured video courtesy of MassArt Marketing and Piyu Somani, MFA Film/Video '23.</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+
+                <div class="l-region l-region--bottom">
+                    <div id="block-bean-make-it-happen" class="block block--bean block--bean-make-it-happen">
+                        <div class="block__content">
+                            <div class="entity entity-bean bean-links-block light-scheme clearfix eb-image" id="entity-bean-21" style="background-image: url('https://massart.edu/sites/default/files/styles/original/public/makehappen_bg.jpg?itok=zyRG_PY5');">
+
+                                <div class="content">
+                                    <div class="field field--name-eb-background field--type-field-collection field--label-hidden">
+                                        <div class="field__items">
+                                            <div class="field__item even">
+                                                <div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
+                                                    <div class="content">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field field--name-field-messaging field--type-text-long field--label-hidden">
+                                        <div class="field__items">
+                                            <div class="field__item even">
+                                                <h2>MAKE<br>IT HAPPEN</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field field--name-field-links field--type-link-field field--label-hidden green-button-set">
+                                        <div class="field__items">
+                                            <div class="field__item even"><a href="https://massart.edu/visit">Visit Us</a></div>
+                                            <div class="field__item odd"><a href="https://massart.edu/admissions">Apply</a></div>
+                                            <div class="field__item even"><a href="https://massart.edu/contactus">Get In Touch</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="l-footer clearfix" role="contentinfo">
+            <div class="footer-logo">
+                <a href="https://massart.edu/" title="Home" rel="home" class="site-logo">
+                    <img src="MassArt%20__files/light-logo.png" alt="Home">
+                </a>
+            </div>
+
+            <div class="l-region l-region--footer">
+                <div id="block-block-1" class="block block--block block--block-1">
+                    <div class="block__content">
+                        <address><p>621 Huntington Ave, Boston, MA 02115 &nbsp; &nbsp;| &nbsp;&nbsp;<a href="tel:6178797000">617.879.7000</a></p></address> </div>
+                </div>
+                <nav aria-label="footer" id="block-menu-menu-footer-links" role="navigation" class="block block--menu block--menu-menu-footer-links">
+
+                    <ul class="menu">
+                        <li class="first leaf"><a href="https://massart.edu/institutional-effectiveness">Institutional Effectiveness</a></li>
+                        <li class="leaf"><a href="https://massart.edu/public-records-request-0">Public Disclosure</a></li>
+                        <li class="last leaf"><a href="https://massart.edu/emergency-preparedness">Emergency Preparedness</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="l-region l-region--social">
+                <nav aria-label="social media" id="block-menu-menu-social-media" role="navigation" class="block block--menu block--menu-menu-social-media">
+
+                    <ul class="menu">
+                        <li class="first leaf"><a href="https://www.facebook.com/MassArtBoston/" class="fa fa-facebook" target="_blank">Facebook</a></li>
+                        <li class="leaf"><a href="https://twitter.com/MassArt" class="fa fa-twitter" target="_blank">Twitter</a></li>
+                        <li class="last leaf"><a href="https://www.instagram.com/massartboston/" class="fa fa-instagram" target="_blank">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- NENI - BRK Pixel code START -->
+            <script src="MassArt%20__files/up_loader.1.1.0.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                ttd_dom_ready( function() {
+                      if (typeof TTDUniversalPixelApi === 'function') {
+                          var universalPixelApi = new TTDUniversalPixelApi();
+                          universalPixelApi.init("wva2d3z", ["rokdcb6"], "https://insight.adsrvr.org/track/up");
+                      }
+                  });
+            </script>
+            <!-- NENI - BRK Pixel code END -->
+
+            <!-- BOSTON.COM Pixel code START -->
+            <script>
+                (function() {
+                  var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script'),sc = 'https:' == document.location.protocol ? 'https://' : 'http://';
+                  s.type='text/javascript';
+                  s.async=true;
+                  s.src=sc+'s.dpmsrv.com/no_jq_dpm_59129aacfb6cebbe2c52f30ef3424209f7252e82.min.js';%0A%20%20%20%20%20%20h.appendChild(s);%0A%20%20%20%20%7D)();%0A%20%20%3C/script%3E%0A%20%20%3C!--%20BOSTON.COM%20Pixel%20code%20END%20--%3E%0A%0A%3C/footer%3E%0A%3C/div%3E%0A%20%20%3Cscript%20src="./MassArt __files/js_MS3i1dVIZEWJv7IgxoYa51QwwoNK4OlCXJ_--8OFRX4.js">
+            </script>
+            <script src="MassArt%20__files/js_Ngn8cC1AsVv8LXr1lNLghGY1Cx70NTAwncTIxp0loE0.js"></script>
+            <script type="text/javascript">
+                window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f6bf594401","applicationID":"70697536","transactionName":"ZFwHbBFWWhJZBkxfWV0WJFsXXlsPFxVZUVNsVARWAlBRE2cVWVFTbFwdXQBCQAQ=","queueTime":0,"applicationTime":523,"atts":"SBsEGllMSRw=","errorBeacon":"bam.nr-data.net","agent":""}
+            </script>
+
+            <div id="cboxOverlay" style="display: none;"></div>
+            <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+                <div id="cboxWrapper">
+                    <div>
+                        <div id="cboxTopLeft" style="float: left;"></div>
+                        <div id="cboxTopCenter" style="float: left;"></div>
+                        <div id="cboxTopRight" style="float: left;"></div>
+                    </div>
+                    <div style="clear: left;">
+                        <div id="cboxMiddleLeft" style="float: left;"></div>
+                        <div id="cboxContent" style="float: left;">
+                            <div id="cboxTitle" style="float: left;"></div>
+                            <div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious" aria-label="previous"></button><button type="button" id="cboxNext" aria-label="next"></button>
+                            <div id="cboxLoadingOverlay" style="float: left;"></div>
+                            <div id="cboxLoadingGraphic" style="float: left;"></div>
+                        </div>
+                        <div id="cboxMiddleRight" style="float: left;"></div>
+                    </div>
+                    <div style="clear: left;">
+                        <div id="cboxBottomLeft" style="float: left;"></div>
+                        <div id="cboxBottomCenter" style="float: left;"></div>
+                        <div id="cboxBottomRight" style="float: left;"></div>
+                    </div>
+                </div>
+                <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+            </div>
+        </footer>
     </div>
-<div class="panel-pane pane-block pane-bean-program-links">
-            <div class="entity entity-bean bean-split-content clearfix" id="entity-bean-1">
-
-  <div class="content">
-    <div class="iwapi-regions panel-display panel-display--split-rtl clearfix"><div class="layout-region content-right"><div class="field field--name-field-secondary-content field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><h4>Programs</h4>
-
-<ul class="inline-menu"><li><a href="https://massart.edu/node/286">Undergraduate</a></li><li><a href="https://massart.edu/node/601">Graduate</a>&nbsp;</li><li><a href="https://massart.edu/node/606">Certificate</a>&nbsp;</li></ul>
-
-<h4><br>Continuing Education</h4>
-
-<ul class="inline-menu"><li><a href="https://massart.edu/node/3361">Adults</a></li><li><a href="https://massart.edu/node/3396">Youth</a></li></ul></div></div></div></div><div class="layout-region content-left"><div class="field field--name-field-messaging field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><p class="mission-statement">Our academic and co-curricular programs prepare&nbsp;artists, designers, and educators from diverse backgrounds to shape communities, economies, and cultures for the common good.</p></div></div></div></div></div>  </div>
-</div>
-    </div>
-<div class="panel-pane pane-custom pane-1 welcome_students">
-            <table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="width: 33%; background-color: rgb(243, 228, 229); padding: 3%; text-align: left; vertical-align: top; border-color: rgb(243, 228, 229);">
-<h4>&nbsp;</h4>
-<h4>Admissions applications are now available for Fall 2023!</h4>
-<p><br><a class="trapezoid" href="https://massart.edu/apply">Learn how to apply</a></p></td>
-<td><div class="media media-element-container media-default"><div id="file-38056" class="file file-image file-image-jpeg">
-
-        <h2 class="element-invisible"><a href="https://massart.edu/files/sabrinaflatlayherojpg">sabrinaflatlay_hero.jpg</a></h2>
-    
-  
-  <div class="content">
-    <img alt="Sabrina&#39;s hands typing on a computer" title="Screenshot from In the Car, Directed by Dillon Buss, Produced by Susie Stockwell" class="media-element file-default" data-delta="9" src="./MassArt __files/sabrinaflatlay_hero.jpg" width="1200" height="798">  </div>
-
-  
-</div>
-</div></td>
-</tr></tbody></table>    </div>
-<div class="panel-pane pane-views pane-new-highlights">
-          <h2 class="pane-title">MassArt In the News</h2>
-        <div class="view view-new-highlights view-id-new_highlights view-display-id-block inline-rows view-dom-id-043d6238c5d305c982689649b5548e95">
-        
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1">
-      
-  <div class="views-field views-field-field-image">        <div class="field-content"><a href="https://massart.edu/news/2022/08/artist-steve-locke-awarded-rappaport-prize-decordova-sculpture-park-and-museum"><img src="./MassArt __files/KXGMSHWGUQS6BVAZMAK4IG3GNM.jpeg" width="400" height="260" alt="Artist Steve Locke has won the deCordova Sculpture Park and Museum&#39;s Rappaport Prize." title="Artist Steve Locke has won the deCordova Sculpture Park and Museum&#39;s Rappaport Prize. Image source: Boston Globe, courtesy of the artist."></a></div>  </div>  
-  <div class="views-field views-field-title">        <span class="field-content"><a href="https://massart.edu/news/2022/08/artist-steve-locke-awarded-rappaport-prize-decordova-sculpture-park-and-museum">Artist Steve Locke awarded Rappaport Prize by deCordova Sculpture Park and Museum</a></span>  </div>  
-  <div class="views-field views-field-field-news-src">        <div class="field-content"><strong><span class="date-display-single">August 25</span></strong> Boston Globe</div>  </div>  </div>
-  <div class="views-row views-row-2">
-      
-  <div class="views-field views-field-field-image">        <div class="field-content"><a href="https://massart.edu/news/2022/08/genevieve-gaignards-new-exhibition-rowan-university-art-gallery-confronts-racial-and"><img src="./MassArt __files/Rowan-August5.jpeg" width="400" height="260" alt="Vanilla Ice, 2016 Edition 3 of 3, Chromogenic print 24 x 36 inches Courtesy of the artist and Vielmetter Los Angeles Photo credit: Jeff Mclane" title="Genevieve Gaignard&#39;s &quot;Vanilla Ice,&quot; 2016 Edition 3 of 3, Chromogenic print 24 x 36 inches Courtesy of the artist and Vielmetter Los Angeles Photo credit: Jeff Mclane"></a></div>  </div>  
-  <div class="views-field views-field-title">        <span class="field-content"><a href="https://massart.edu/news/2022/08/genevieve-gaignards-new-exhibition-rowan-university-art-gallery-confronts-racial-and">Genevieve Gaignard's New Exhibition at Rowan University Art Gallery Confronts Racial and Gender Stereotypes</a></span>  </div>  
-  <div class="views-field views-field-field-news-src">        <div class="field-content"><strong><span class="date-display-single">August 18</span></strong> New Jersey Stage</div>  </div>  </div>
-  <div class="views-row views-row-3">
-      
-  <div class="views-field views-field-field-image">        <div class="field-content"><a href="https://massart.edu/news/2022/08/massart-offer-workshops-expanded-programming-thanks-grant-mayor%E2%80%99s-office-arts-and"><img src="./MassArt __files/MissionHillGazette.png" width="400" height="260" alt="Mission Hill Gazette logo" title="Mission Hill Gazette logo"></a></div>  </div>  
-  <div class="views-field views-field-title">        <span class="field-content"><a href="https://massart.edu/news/2022/08/massart-offer-workshops-expanded-programming-thanks-grant-mayor%E2%80%99s-office-arts-and">MassArt to offer workshops; expanded programming thanks to grant from Mayor’s Office of Arts and Culture</a></span>  </div>  
-  <div class="views-field views-field-field-news-src">        <div class="field-content"><strong><span class="date-display-single">August 5</span></strong> Mission Hill Gazette</div>  </div>  </div>
-    </div>
-  
-  
-  
-  
-  
-  
-</div>    </div>
-<div class="panel-pane pane-block pane-bean-primary-gallery-block">
-            <div class="entity entity-bean bean-gallery-block light-scheme clearfix eb-image" id="entity-bean-6" style="background-image: url(&quot;https://massart.edu/sites/default/files/styles/original/public/gallery_bg_0.jpg?itok=xVON5CF6&quot;);">
-
-  <div class="content">
-    <div class="iwapi-regions panel-display panel-display--split-block clearfix"><div class="layout-region content-left"><div class="field field--name-eb-background field--type-field-collection field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
-  <div class="content">
-      </div>
-</div>
-</div></div></div><div class="field field--name-field-messaging field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><h2>What<br>We Make</h2>
-
-<p>View student, faculty, and alumni artwork from all disciplines.</p>
-
-<p><a class="button blocks-icon" href="https://massart.edu/gallery">Interactive Gallery</a></p></div></div></div></div><div class="layout-region content-right"><div class="embedded-view embedded-content" id="embed-view-gallery-snippets"><div class="view view-gallery-snippets view-id-gallery_snippets view-display-id-default view-dom-id-011e0c9ce21dbbc2ce263a23bacba498">
-        
-  
-  
-      <div class="view-content">
-      
-<div id="massart-gallery" class="massart-gallery ma-behaviors-processed">
-  <div class="gallery-content" style="position: relative; height: 755.25px;">
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 0px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20446/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Zhang_01_0.jpeg" width="480" height="384" alt="Ronghao Zhang (MFA ‘21 Photography), Curtain, 2021, archival inkjet print, 30″ x 24″" title="Ronghao Zhang (MFA ‘21 Photography), Curtain, 2021, archival inkjet print, 30″ x 24″">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 0px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20666/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Charity Be_Everythinginlifeisvibrationalberteinstein.jpg" width="480" height="240" alt="Charity Be (MFA ‘22 Fine Arts Low-Residency), Everything In Life Is Vibration Albert Einstein (Work-in-Progress), 2022" title="Charity Be (MFA ‘22 Fine Arts Low-Residency), Everything In Life Is Vibration Albert Einstein (Work-in-Progress), 2022">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 0px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20671/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Charity Be_feucht_3.JPG" width="480" height="360" alt="Charity Be (MFA ‘22 Fine Arts Low-Residency), Feucht (Work-in-Progress), 2022" title="Charity Be (MFA ‘22 Fine Arts Low-Residency), Feucht (Work-in-Progress), 2022">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 90px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20676/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Mikhail Kogan.png" width="480" height="269" alt="Mikhail Kogan (MFA ‘23 Fine Arts Low-Residency), Work-in-Progress, 2022" title="Mikhail Kogan (MFA ‘23 Fine Arts Low-Residency), Work-in-Progress, 2022">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 135px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19111/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Al Liu - Junior.png" width="337" height="480" alt="Artwork by Ali Liu" title="Artwork by Ali Liu">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 144px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19116/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Aliyah Pruitt - Alum.jpg" width="480" height="256" alt="Artwork by Aliyah Pruitt" title="Artwork by Aliyah Pruitt">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 190px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20561/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Barnard_02.jpeg" width="480" height="360" alt="Tabitha Barnard (MFA ‘21 Photography), Claw, 2021, archival inkjet print, 16” x 20”" title="Tabitha Barnard (MFA ‘21 Photography), Claw, 2021, archival inkjet print, 16” x 20”">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 0%; top: 240px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19136/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Jackson Carpenter - Junior.jpg" width="360" height="480" alt="Artwork by Jackson Carpenter" title="Artwork by Jackson Carpenter">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 33.3333%; top: 325px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/20566/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Eshun_01.jpeg" width="360" height="480" alt="Claudio Eshun (MFA ‘21 Photography), Unc.lue &amp; Nana, 2021, archival inkjet print, 24″ x 18″" title="Claudio Eshun (MFA ‘21 Photography), Unc.lue &amp; Nana, 2021, archival inkjet print, 24″ x 18″">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-          
-<div class="massart-artwork gallery-item" style="position: absolute; left: 66.6667%; top: 391px;">
-
-      <a class="colorbox-load init-colorbox-load-processed cboxElement" href="https://massart.edu/node/19151/view/iframe?width=1200&amp;height=800&amp;iframe=true" rel="gallery[gallery_snippets]">
-
-      <img src="./MassArt __files/Sergine Muzac - Sophomore.jpg" width="294" height="480" alt="Artwork by Sergine Muzac" title="Artwork by Sergine Muzac">      <span class="gallery-overlay"><i class="fa fa-plus colorbox-link"></i></span>
-    </a>
-  
-</div>
-      </div>
-
-  <noscript></noscript>
-</div>
-    </div>
-  
-  
-  
-  
-  
-  
-</div></div></div></div>  </div>
-</div>
-    </div>
-<div class="panel-pane pane-block pane-bean-make-a-diff">
-            <div class="entity entity-bean bean-cta-block dark-scheme clearfix eb-image" id="entity-bean-11" style="background-image: url(&quot;https://massart.edu/sites/default/files/styles/original/public/difference_bg_0.jpg?itok=WPT_aJ1E&quot;);">
-
-  <div class="content">
-    <div class="iwapi-regions panel-display panel-display--cta-block clearfix"><div class="layout-region content-main"><div class="field field--name-eb-background field--type-field-collection field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
-  <div class="content">
-      </div>
-</div>
-</div></div></div><div class="field field--name-field-messaging field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><h2>Make a Difference</h2>
-
-<p>MassArt supports its longstanding mission through public programs and educational offerings for local schools to make art and design accessible for all.</p></div></div></div>
-<div class="paragraphs-items paragraphs-items-field-cta-primary paragraphs-items-field-cta-primary-full paragraphs-items-full">
-  <div class="field field--name-field-cta-primary field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-primary"><div class="field__items"><div class="field__item even">
-<div class="entity entity-paragraphs-item paragraphs-item-primary-cta paragraphs-item-36 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/cacphome.jpg" width="800" height="480" alt="CACP" title="CACP"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/cacp">Center for Art and Community Partnerships</a></div></div></div>  </div>
-</div>
-</div></div></div></div>
-</div><div class="layout-region sidebar-right">
-<div class="paragraphs-items paragraphs-items-field-cta-links paragraphs-items-field-cta-links-full paragraphs-items-full">
-  <div class="field field--name-field-cta-links field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-links"><div class="field__items"><div class="field__item even">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-6 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/make_diff_2.jpg" width="480" height="288" alt="MassArt Legacy" title="MassArt Legacy"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/about">MassArt Legacy</a></div></div></div>  </div>
-</div>
-</div><div class="field__item odd">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-11 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/ab_(massarthome).jpg" width="480" height="288" alt="MassArt student" title="MassArt student"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/artwardbound">Artward Bound</a></div></div></div>  </div>
-</div>
-</div><div class="field__item even">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-16 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/galleryedhome.jpg" width="480" height="288" alt="Gallery Education" title="Gallery Education"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://maam.massart.edu/learn">Museum Education</a></div></div></div>  </div>
-</div>
-</div></div></div></div>
-</div></div>  </div>
-</div>
-    </div>
-<div class="panel-pane pane-block pane-bean-make-your-move">
-            <div class="entity entity-bean bean-cta-links dark-scheme clearfix eb-image" id="entity-bean-16" style="background-image: url(&quot;https://massart.edu/sites/default/files/styles/original/public/skyline_0.jpg?itok=rnFF2-y6&quot;);">
-
-  <div class="content">
-    <div class="iwapi-regions panel-display panel-display--cta-links clearfix"><div class="layout-region content-main"><div class="field field--name-eb-background field--type-field-collection field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
-  <div class="content">
-      </div>
-</div>
-</div></div></div><div class="field field--name-field-messaging field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><h2>Make<br>Your Move</h2>
-
-<p>Located on the Avenue of the&nbsp;Arts in Boston, MassArt is an&nbsp;<br>incredible&nbsp;place for the merging of creative and innovative ideas.</p></div></div></div></div><div class="layout-region content-links">
-<div class="paragraphs-items paragraphs-items-field-cta-links paragraphs-items-field-cta-links-full paragraphs-items-full">
-  <div class="field field--name-field-cta-links field--type-paragraphs field--label-hidden paragraphs-items paragraphs-items-view-mode-full paragraphs-items-field-field-cta-links"><div class="field__items"><div class="field__item even">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-21 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/make_move_1.jpg" width="480" height="288" alt="Life at MassArt" title="Life at MassArt"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/student-life">Life at MassArt</a></div></div></div>  </div>
-</div>
-</div><div class="field__item odd">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-26 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/make_move_2.jpg" width="480" height="288" alt="Living in Boston" title="Living in Boston"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/living-boston">Living in Boston</a></div></div></div>  </div>
-</div>
-</div><div class="field__item even">
-<div class="entity entity-paragraphs-item paragraphs-item-cta-action paragraphs-item-31 clearfix">
-  <div class="field field--name-field-bg-image field--type-image field--label-hidden"><div class="field__items"><div class="field__item even"><img src="./MassArt __files/make_move_3.jpg" width="480" height="288" alt="Career Development" title="Career Development"></div></div></div>  <div class="overlay-content">
-       <div class="field field--name-field-cta-link field--type-link-field field--label-hidden"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/careerdevelopment">Career Development</a></div></div></div>  </div>
-</div>
-</div></div></div></div>
-</div></div>  </div>
-</div>
-    </div>
-<div class="panel-pane pane-custom pane-2">
-            <p>&nbsp;</p>    </div>
-<div class="panel-pane pane-custom pane-3 pane-events-localist">
-          <h2 class="pane-title">Events</h2>
-        <script type="text/javascript" src="./MassArt __files/view"></script><div id="lw"> <div class="lw"> <ul id="lwe"> <li class="lwe"> <div class="lwn"> <span class="lwn0"> Sep 12 - Oct 5 </span> <a href="https://calendar.massart.edu/event/from_darkness_to_light_and_back_again_doran_gallery?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">From Darkness To Light... and back again | Doran Gallery</a> </div> <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/dmc?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">Design and Media Center</a> </div> </li> <li class="lwe"> <div class="lwn"> <span class="lwn0"> Sep 14 - Sep 25 </span> <a href="https://calendar.massart.edu/event/thew_new_drawing_room_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">The New Drawing Room // MassArt x SoWa</a> </div> <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/event/thew_new_drawing_room_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">MassArt x SoWa</a> </div> </li> <li class="lwe"> <div class="lwn"> <span class="lwn0"> Sep 14 </span> <a href="https://calendar.massart.edu/event/philemona_williamson_artist_talk_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">Philemona Williamson Artist Talk | MassArt x SoWa</a> </div> <div class="lwl"><span class="lwl0">Location:</span> <a href="https://calendar.massart.edu/event/philemona_williamson_artist_talk_massart_x_sowa?utm_campaign=widget&amp;utm_medium=widget&amp;utm_source=Massachusetts+College+of+Art+and+Design" target="_blank">MassArt x SoWa</a> </div> </li> </ul> </div> </div><p><a class="button calendar-icon" href="https://calendar.massart.edu/" target="_blank">Full Calendar</a></p>
-    </div>
-<div class="panel-pane pane-custom pane-4">
-            <p style="font-size:12px;"><em>Featured video courtesy of MassArt Marketing and Piyu Somani, MFA Film/Video '23.</em></p>    </div>
-</div>
-  </div>
-</div>
-          </main>
-                      </div>
+    <div class="silex-pages">
+        <div data-silex-type="image" data-silex-id="silex-id-hamburger-menu" class="menu-button editable-style silex-id-hamburger-menu image-element page-page-1 paged-element prevent-draggable prevent-resizable"><img alt="open mobile menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII="
+                class="silex-element-content"></div>
     </div>
 
-      <div class="l-region l-region--bottom">
-    <div id="block-bean-make-it-happen" class="block block--bean block--bean-make-it-happen">
-        <div class="block__content">
-    <div class="entity entity-bean bean-links-block light-scheme clearfix eb-image" id="entity-bean-21" style="background-image: url(&quot;https://massart.edu/sites/default/files/styles/original/public/makehappen_bg.jpg?itok=zyRG_PY5&quot;);">
 
-  <div class="content">
-    <div class="field field--name-eb-background field--type-field-collection field--label-hidden"><div class="field__items"><div class="field__item even"><div class="entity entity-field-collection-item field-collection-item-eb-background clearfix">
-  <div class="content">
-      </div>
-</div>
-</div></div></div><div class="field field--name-field-messaging field--type-text-long field--label-hidden"><div class="field__items"><div class="field__item even"><h2>MAKE<br>IT HAPPEN</h2></div></div></div><div class="field field--name-field-links field--type-link-field field--label-hidden green-button-set"><div class="field__items"><div class="field__item even"><a href="https://massart.edu/visit">Visit Us</a></div><div class="field__item odd"><a href="https://massart.edu/admissions">Apply</a></div><div class="field__item even"><a href="https://massart.edu/contactus">Get In Touch</a></div></div></div>  </div>
-</div>
-  </div>
-</div>
-  </div>
-  </div>
-</div>
+</body>
 
-
-<footer class="l-footer clearfix" role="contentinfo">
-      <div class="footer-logo">
-      <a href="https://massart.edu/" title="Home" rel="home" class="site-logo">
-        <img src="./MassArt __files/light-logo.png" alt="Home">
-      </a>
-    </div>
-  
-    <div class="l-region l-region--footer">
-    <div id="block-block-1" class="block block--block block--block-1">
-        <div class="block__content">
-    <address><p>621 Huntington Ave, Boston, MA 02115 &nbsp; &nbsp;| &nbsp;&nbsp;<a href="tel:6178797000">617.879.7000</a></p></address>  </div>
-</div>
-<nav aria-label="footer" id="block-menu-menu-footer-links" role="navigation" class="block block--menu block--menu-menu-footer-links">
-      
-  <ul class="menu"><li class="first leaf"><a href="https://massart.edu/institutional-effectiveness">Institutional Effectiveness</a></li>
-<li class="leaf"><a href="https://massart.edu/public-records-request-0">Public Disclosure</a></li>
-<li class="last leaf"><a href="https://massart.edu/emergency-preparedness">Emergency Preparedness</a></li>
-</ul></nav>
-  </div>
-    <div class="l-region l-region--social">
-    <nav aria-label="social media" id="block-menu-menu-social-media" role="navigation" class="block block--menu block--menu-menu-social-media">
-      
-  <ul class="menu"><li class="first leaf"><a href="https://www.facebook.com/MassArtBoston/" class="fa fa-facebook" target="_blank">Facebook</a></li>
-<li class="leaf"><a href="https://twitter.com/MassArt" class="fa fa-twitter" target="_blank">Twitter</a></li>
-<li class="last leaf"><a href="https://www.instagram.com/massartboston/" class="fa fa-instagram" target="_blank">Instagram</a></li>
-</ul></nav>
-  </div>
-
-  <!-- NENI - BRK Pixel code START -->
-  <script src="./MassArt __files/up_loader.1.1.0.js" type="text/javascript"></script>
-  <script type="text/javascript">
-      ttd_dom_ready( function() {
-          if (typeof TTDUniversalPixelApi === 'function') {
-              var universalPixelApi = new TTDUniversalPixelApi();
-              universalPixelApi.init("wva2d3z", ["rokdcb6"], "https://insight.adsrvr.org/track/up");
-          }
-      });
-  </script>
-  <!-- NENI - BRK Pixel code END -->
-
-  <!-- BOSTON.COM Pixel code START -->
-  <script>
-    (function() {
-      var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script'),sc = 'https:' == document.location.protocol ? 'https://' : 'http://';
-      s.type='text/javascript';
-      s.async=true;
-      s.src=sc+'s.dpmsrv.com/no_jq_dpm_59129aacfb6cebbe2c52f30ef3424209f7252e82.min.js';
-      h.appendChild(s);
-    })();
-  </script>
-  <!-- BOSTON.COM Pixel code END -->
-
-</footer>
-</div>
-  <script src="./MassArt __files/js_MS3i1dVIZEWJv7IgxoYa51QwwoNK4OlCXJ_--8OFRX4.js"></script>
-<script src="./MassArt __files/js_Ngn8cC1AsVv8LXr1lNLghGY1Cx70NTAwncTIxp0loE0.js"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f6bf594401","applicationID":"70697536","transactionName":"ZFwHbBFWWhJZBkxfWV0WJFsXXlsPFxVZUVNsVARWAlBRE2cVWVFTbFwdXQBCQAQ=","queueTime":0,"applicationTime":523,"atts":"SBsEGllMSRw=","errorBeacon":"bam.nr-data.net","agent":""}</script>
-
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious" aria-label="previous"></button><button type="button" id="cboxNext" aria-label="next"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
+</html>
